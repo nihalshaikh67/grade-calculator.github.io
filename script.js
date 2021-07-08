@@ -18,11 +18,14 @@ const calcy = () =>{
     }else{
     grades = 'F';
     }
-    if(perc >= 39.5){
+      if(wd >100 || maths > 100 || comp >100 || phy > 100){
+        document.getElementById('showData').innerHTML = `Please enter marks bewteen 1 to 100.`
+      }
+     else if(perc >= 39.5){
         document.getElementById('showData').innerHTML = `Out of 400 your total is ${total} and percentage is ${perc}% . <br> Your grade is ${grades}. You are Pass.`
       }
       else{
-        document.getElementById('showData').innerHTML = ` Out of 400 your total is  ${totalGrades} and percentage is ${perc}%. <br> Your grade is ${grades}. You are Fail. `
+        document.getElementById('showData').innerHTML = `Out of 400 your total is ${total} and percentage is ${perc}% . <br> Your grade is ${grades}. You are Fail.`
       }
 
 
